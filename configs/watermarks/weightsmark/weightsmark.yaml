@@ -1,0 +1,8 @@
+modelname: meta-llama/Llama-2-7b-hf
+std: 0.018
+key: 0
+device: cuda
+layer_ids:
+ - 31
+param_names:
+ - mlp.up_proj

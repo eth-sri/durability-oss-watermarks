@@ -1,0 +1,9 @@
+pruning_method: wanda
+pruning_method_config:
+  n_samples: 128
+  seed: 0
+  prune_n: 0
+  prune_m: 0
+  sparsity_ratio: 0.7
+dtype: float32
+base_model: PLACEHOLDER

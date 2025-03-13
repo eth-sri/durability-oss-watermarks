@@ -1,0 +1,31 @@
+base_model: "Grogros/llama2-7b-hf-unremovable-std0.6-key0"
+caching_models: false
+evaluate_original: true
+
+watermark_evaluation_config: 
+ - configs/eval/watermark_eval.yaml
+watermark_type: unremovable
+watermark_config: "configs/watermarks/unremovable/unremovable.yaml"
+
+disable_wm_detector: false
+overwrite_results: false
+
+output_directory: output
+huggingface_name: Grogros
+
+quantization_config_files:
+  - configs/model_modifications/quantization/llama2/hqq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/gptq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/gptq/8bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit_nested.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/8bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit_qlora.yaml
+  - configs/model_modifications/quantization/llama2/awq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/hqq/8bit.yaml
+
+finetuning_config_files:
+  - configs/model_modifications/finetuning/llama2/lora/learnability_adversarial_lora.yaml
+  - configs/model_modifications/finetuning/llama2/lora/math_instruct_lora.yaml
+  - configs/model_modifications/finetuning/llama2/math_instruct.yaml
+  - configs/model_modifications/finetuning/llama2/learnability_adversarial.yaml 

@@ -1,0 +1,5 @@
+quantization_method: gptq
+base_model: PLACEHOLDER
+quantization_config:
+  bits: 2
+  batch_size: 16

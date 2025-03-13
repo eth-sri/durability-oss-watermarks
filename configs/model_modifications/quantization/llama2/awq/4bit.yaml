@@ -1,0 +1,4 @@
+quantization_method: awq
+base_model: PLACEHOLDER
+quantization_config:
+  w_bit: 4

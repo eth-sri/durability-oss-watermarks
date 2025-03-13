@@ -1,0 +1,4 @@
+quantization_method: hqq
+base_model: PLACEHOLDER
+quantization_config:
+  nbits: 8

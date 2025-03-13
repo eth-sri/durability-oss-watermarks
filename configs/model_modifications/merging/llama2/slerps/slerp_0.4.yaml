@@ -1,0 +1,17 @@
+slices:
+  - sources:
+      - model: PLACEHOLDER
+        layer_range: [0, 32]
+      - model: meta-llama/Llama-2-7b-hf
+        layer_range: [0, 32]
+
+merge_method: slerp
+base_model: PLACEHOLDER
+merge_name: slerp-0.4
+
+parameters:
+  t:
+    - value: 0.4 # fallback for rest of tensors
+tokenizer_source: union
+
+dtype: bfloat16

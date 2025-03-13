@@ -1,0 +1,10 @@
+pruning_method: gblm
+pruning_method_config:
+  n_samples: 128
+  seed: 0
+  prune_n: 0
+  prune_m: 0
+  sparsity_ratio: 0.6
+  base_model: PLACEHOLDER
+dtype: float32
+base_model: PLACEHOLDER

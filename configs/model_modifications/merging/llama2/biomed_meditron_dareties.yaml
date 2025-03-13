@@ -1,0 +1,137 @@
+# Config from: https://huggingface.co/ssktora/llama2_biomed_meditron?utm_source=chatgpt.com
+base_model: PLACEHOLDER
+dtype: bfloat16
+merge_method: dare_ties
+merge_name: dareTies+BioMedGPT+meditron
+parameters:
+  int8_mask: 1.0
+  normalize: 1.0
+slices:
+- sources:
+  - layer_range: [0, 4]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 1.0
+      weight: 0.17884011663118993
+  - layer_range: [0, 4]
+    model: PLACEHOLDER
+    parameters:
+      density: 0.8890748672494518
+      weight: 0.8456004469240137
+  - layer_range: [0, 4]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 0.8353965535147524
+      weight: 0.39636256675038484
+- sources:
+  - layer_range: [4, 8]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 1.0
+      weight: 1.020532319785238
+  - layer_range: [4, 8]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.40553667157598416
+  - layer_range: [4, 8]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 0.8955950669638045
+      weight: 0.1256681933865999
+- sources:
+  - layer_range: [8, 12]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 0.8698472775356287
+      weight: 0.712509376634506
+  - layer_range: [8, 12]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.09302230163177483
+  - layer_range: [8, 12]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 1.0
+      weight: -0.05614416786806742
+- sources:
+  - layer_range: [12, 16]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 1.0
+      weight: 0.39694054142633234
+  - layer_range: [12, 16]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.2626803763724651
+  - layer_range: [12, 16]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 0.9657199816167481
+      weight: 0.2153132357599829
+- sources:
+  - layer_range: [16, 20]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 0.8289285693717532
+      weight: 0.34481743191831266
+  - layer_range: [16, 20]
+    model: PLACEHOLDER
+    parameters:
+      density: 0.7115155293484904
+      weight: 0.03210636463921337
+  - layer_range: [16, 20]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 1.0
+      weight: 0.23727760414855137
+- sources:
+  - layer_range: [20, 24]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 0.9992577736634561
+      weight: 0.33608731549782594
+  - layer_range: [20, 24]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.2672857028656318
+  - layer_range: [20, 24]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 1.0
+      weight: 0.4567325333292645
+- sources:
+  - layer_range: [24, 28]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 1.0
+      weight: -0.061310476755757834
+  - layer_range: [24, 28]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.23902257193439966
+  - layer_range: [24, 28]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 0.5322311277242968
+      weight: 0.37656791069123563
+- sources:
+  - layer_range: [28, 32]
+    model: PharMolix/BioMedGPT-LM-7B
+    parameters:
+      density: 1.0
+      weight: -0.018284769401157808
+  - layer_range: [28, 32]
+    model: PLACEHOLDER
+    parameters:
+      density: 1.0
+      weight: 0.5831277146552916
+  - layer_range: [28, 32]
+    model: epfl-llm/meditron-7b
+    parameters:
+      density: 0.8437643378550103
+      weight: 0.1599917740219515

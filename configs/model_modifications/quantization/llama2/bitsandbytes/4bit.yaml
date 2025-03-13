@@ -1,0 +1,8 @@
+quantization_method: bitsandbytes
+quantization_config:
+  load_in_8bit: false
+  load_in_4bit: true
+  llm_int8_threshold: 0.6
+  bnb_4bit_quant_type: fp4
+  bnb_4bit_use_double_quant: False
+base_model: PLACEHOLDER

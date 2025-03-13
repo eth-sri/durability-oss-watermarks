@@ -1,0 +1,14 @@
+/logs
+/logs_llama
+/my_trained_model_no_lora
+/results
+/trainer.py
+models/
+evaluate/fine_tuning_robustness/gpt_2_distill_simple1/
+**/__pycache__/
+ctv/
+temp/
+benchmark/reef/activations/
+super_activations/reef/
+output/
+Grogros/

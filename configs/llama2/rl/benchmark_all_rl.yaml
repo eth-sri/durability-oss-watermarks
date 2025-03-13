@@ -1,0 +1,72 @@
+base_model: "Grogros/llama2-7b-RLwatermark"
+caching_models: false
+
+evaluate_original: true
+
+watermark_evaluation_config: 
+ - configs/eval/watermark_eval.yaml
+watermark_type: rl
+watermark_config: "configs/watermarks/rl/llama2_rl.yaml"
+
+disable_wm_detector: false
+overwrite_results: true
+
+output_directory: "output"
+huggingface_name: Grogros
+
+quantization_config_files:
+  - configs/model_modifications/quantization/llama2/hqq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/gptq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/gptq/8bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit_nested.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/8bit.yaml
+  - configs/model_modifications/quantization/llama2/bitsandbytes/4bit_qlora.yaml
+  - configs/model_modifications/quantization/llama2/awq/4bit.yaml
+  - configs/model_modifications/quantization/llama2/hqq/8bit.yaml
+
+pruning_config_files:
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.1.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.2.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.3.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.4.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.5.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.6.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.7.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.8.yaml
+  - configs/model_modifications/pruning/llama2/gblm/gblm_0.9.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.1.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.2.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.3.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.4.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.5.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.6.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.7.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.8.yaml
+  - configs/model_modifications/pruning/llama2/sparseGPT/sparseGPT_0.9.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.1.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.2.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.3.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.4.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.5.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.6.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.7.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.8.yaml
+  - configs/model_modifications/pruning/llama2/wanda/wanda_0.9.yaml
+
+merge_config_files:
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.1.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.2.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.3.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.4.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.5.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.6.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.7.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.8.yaml
+  - configs/model_modifications/merging/llama2/slerps/slerp_0.9.yaml  
+
+finetuning_config_files:
+  - configs/model_modifications/finetuning/llama2/lora/learnability_adversarial_lora.yaml
+  - configs/model_modifications/finetuning/llama2/lora/math_instruct_lora.yaml
+  - configs/model_modifications/finetuning/llama2/math_instruct.yaml
+  - configs/model_modifications/finetuning/llama2/learnability_adversarial.yaml 

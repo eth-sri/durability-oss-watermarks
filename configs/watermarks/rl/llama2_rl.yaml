@@ -1,0 +1,3 @@
+reward_model_path: additional_data/rl_reward_model/llama2_rl_reward_model.pt
+calibration_cdf_path: additional_data/rl_reward_model/llama2_rl_reward_model_cdf.pt
+reward_model_config: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T

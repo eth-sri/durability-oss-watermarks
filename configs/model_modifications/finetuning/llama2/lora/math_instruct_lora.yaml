@@ -1,0 +1,32 @@
+base_model: PLACEHOLDER
+dtype: bfloat16
+training_args:
+  overwrite_output_dir: true
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 32
+  gradient_checkpointing: false
+  learning_rate: 0.00002
+  num_train_epochs: 1
+  do_train: true
+  max_steps: 2500
+  optim: adafactor 
+  lr_scheduler_type: cosine
+  warmup_ratio : 0.1
+  save_strategy: steps
+  save_steps: 500
+  bf16: false
+  fp16: false
+  logging_steps : 100
+  push_to_hub: false
+lora_config:
+  target_modules: [v_proj, k_proj, o_proj, q_proj]
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  fan_in_fan_out: false
+  bias: none
+  use_rslora: false
+  use_dora: false
+train_dataset: OpenMathInstruct
+watermark_eval_config:
+ - configs/eval/math_watermark_eval.yaml
